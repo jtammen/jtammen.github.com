@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="com.clever-age" module="play2-elasticsearch" revision="1.4-zupply" status="release" publication="20150731214632">
+		<license name="MIT" url="http://opensource.org/licenses/MIT"/>
+		<description homepage="https://github.com/cleverage/play2-elasticsearch">
+		play2-elasticsearch
+		</description>
+	</info>
+	<configurations>
+		<conf name="compile" visibility="public" description=""/>
+		<conf name="runtime" visibility="public" description="" extends="compile"/>
+		<conf name="test" visibility="public" description="" extends="runtime"/>
+		<conf name="provided" visibility="public" description=""/>
+		<conf name="optional" visibility="public" description=""/>
+		
+		
+		
+		
+		<conf name="sources" visibility="public" description=""/>
+		
+		<conf name="pom" visibility="public" description=""/>
+		
+	</configurations>
+	<publications>
+		<artifact name="play2-elasticsearch" type="pom" ext="pom" conf="pom"/>
+		<artifact name="play2-elasticsearch" type="jar" ext="jar" conf="compile"/>
+		<artifact name="play2-elasticsearch" type="src" ext="jar" conf="sources" e:classifier="sources"/>
+		
+	</publications>
+	<dependencies>
+		
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.2" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-java_2.10" rev="2.2.1" conf="compile->default(compile)"/>
+		<dependency org="org.elasticsearch" name="elasticsearch" rev="1.4.1" conf="compile->default(compile)"/>
+		<dependency org="org.codehaus.groovy" name="groovy-all" rev="2.3.8" conf="compile->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-lang3" rev="3.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play_2.10" rev="2.2.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.10" rev="2.2.1" conf="test->default(compile)"/>
+		
+	</dependencies>
+</ivy-module>
